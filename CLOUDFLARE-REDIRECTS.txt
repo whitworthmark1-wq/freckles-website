@@ -1,0 +1,108 @@
+CLOUDFLARE REDIRECT RULES
+===========================
+Add ALL of these rules in Cloudflare before going live.
+Dashboard > Your Domain > Rules > Redirect Rules > Create Rule
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RULE 1 — www to non-www (CRITICAL for Search Console)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  When: Hostname equals  www.frecklesbeautyclinic.co.uk
+  Then: Redirect to      https://frecklesbeautyclinic.co.uk${uri.path}
+  Type: 301 (Permanent)
+
+This fixes the Search Console issue with:
+  http://www.frecklesbeautyclinic.co.uk/
+  https://www.frecklesbeautyclinic.co.uk/
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RULE 2 — http to https (CRITICAL for security + SEO)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  When: SSL/HTTPS is Off
+  Then: Redirect to      https://frecklesbeautyclinic.co.uk${uri.path}
+  Type: 301 (Permanent)
+
+NOTE: Cloudflare also has an "Always Use HTTPS" toggle under
+SSL/TLS > Edge Certificates — enable this too. It handles
+this automatically without needing a manual rule.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RULE 3 — Trailing slash removal
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  When: URI Path ends with  /  AND URI Path does not equal  /
+  Then: Redirect to      https://frecklesbeautyclinic.co.uk${regex_replace(uri.path, "/$", "")}
+  Type: 301 (Permanent)
+
+This fixes the Search Console issue with:
+  https://frecklesbeautyclinic.co.uk/contact/  → /contact
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RULE 4 — Old Squarespace /treatments page
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  When: URI Path equals  /treatments
+  Then: Redirect to      https://frecklesbeautyclinic.co.uk/
+  Type: 301 (Permanent)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RULE 5 — Old Squarespace /freckles-treatments page
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  When: URI Path equals  /freckles-treatments
+  Then: Redirect to      https://frecklesbeautyclinic.co.uk/
+  Type: 301 (Permanent)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RULE 6 — Block search spam URL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  When: Query String contains  s=
+  Then: Redirect to      https://frecklesbeautyclinic.co.uk/
+  Type: 301 (Permanent)
+
+This removes the /?s={search_term_string} URL from Google's index.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RULE 7 — Old /home slug (canonical conflict fix)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  When: URI Path equals  /home
+  Then: Redirect to      https://frecklesbeautyclinic.co.uk/
+  Type: 301 (Permanent)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RULE 8 — Old /store page
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  When: URI Path equals  /store
+  Then: Redirect to      https://frecklesbeautyclinic.co.uk/
+  Type: 301 (Permanent)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLOUDFLARE SETTINGS TO ALSO ENABLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SSL/TLS > Edge Certificates:
+  ✅ Always Use HTTPS — ON
+  ✅ Automatic HTTPS Rewrites — ON
+  ✅ Minimum TLS Version — TLS 1.2
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AFTER GOING LIVE — SEARCH CONSOLE STEPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Once the domain is live on Cloudflare, go to Google Search Console
+and request re-indexing for each of these URLs:
+
+1. https://frecklesbeautyclinic.co.uk/
+2. https://frecklesbeautyclinic.co.uk/about
+3. https://frecklesbeautyclinic.co.uk/contact
+4. https://frecklesbeautyclinic.co.uk/caci
+5. https://frecklesbeautyclinic.co.uk/laser
+6. https://frecklesbeautyclinic.co.uk/skincare
+7. https://frecklesbeautyclinic.co.uk/dermalogica
+8. https://frecklesbeautyclinic.co.uk/beauty
+9. https://frecklesbeautyclinic.co.uk/opi
+10. https://frecklesbeautyclinic.co.uk/skin-school
+
+For each URL:
+  → Paste URL into the Search Console top bar
+  → Click "Request Indexing"
+  → Wait for confirmation
+
+Also submit the sitemap:
+  → Search Console > Sitemaps > Add new sitemap
+  → Enter: sitemap.xml
+  → Click Submit

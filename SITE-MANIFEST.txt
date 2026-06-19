@@ -1,0 +1,79 @@
+FRECKLES BEAUTY CLINIC — WEBSITE FILE MANIFEST
+================================================
+Built: May 2026
+Total HTML pages: 17
+Total images: 23
+
+HTML PAGES
+----------
+index.html              — Homepage
+about.html              — About Us
+caci.html               — CACI Non-Surgical Facials
+laser.html              — Laser Hair Removal
+skincare.html           — Pro-A AI Skin Analysis
+dermalogica.html        — Dermalogica Skincare
+beauty.html             — Beauty Treatments
+opi.html                — O.P.I Nail Spa
+contact.html            — Contact
+skin-school.html        — Skin School (blog hub)
+beauty-clinic-acklam.html
+beauty-clinic-coulby-newham.html
+beauty-clinic-marton.html
+beauty-clinic-nunthorpe.html
+beauty-clinic-ormesby.html
+beauty-clinic-stockton.html
+beauty-clinic-teesside.html
+
+BLOG POSTS (separate files to add to skin-school folder)
+---------------------------------------------------------
+caci-course-vs-one-off.html  — Why a Course of CACI Beats a One-Off Facial
+
+IMAGES (/images/ folder)
+------------------------
+freckles-logo.png                              ⚠️  NEEDS UPLOADING — see LOGO-README.txt
+favicon.png                                    ✅
+phillippa-katy-freckles-beauty-clinic-middlesbrough.jpg  ✅ About page
+freckles-clinic-interior-middlesbrough.jpg     ✅ About / Homepage
+freckles-opi-nail-station.jpg                  ✅ OPI / About
+pro-a-skin-analyser-freckles-middlesbrough.jpg ✅ Skincare (real clinic photo)
+caci-led-facial-freckles-middlesbrough.webp    ✅ CACI / Homepage
+caci-microcurrent-wand-freckles.png            ✅ CACI
+caci-synergy-wand-freckles.png                 ✅ CACI Synergy
+caci-synergy-treatment-freckles-middlesbrough.webp ✅ CACI Radiance card
+caci-microcurrent-treatment-middlesbrough.jpg  ✅ CACI
+caci-wand-led-freckles-middlesbrough.jpg       ✅ CACI
+laser-hair-removal-underarm-middlesbrough.png  ✅ Laser
+laser-hair-removal-tattoo-middlesbrough.png    ✅ Laser
+beauty-treatment-facial-middlesbrough.jpg      ✅ Beauty
+dermalogica-facial-freckles-middlesbrough.jpg  ✅ Dermalogica
+dermalogica-treatment-freckles.webp            ✅ Dermalogica
+opi-colour-wall-freckles-middlesbrough.jpg     ✅ OPI (real clinic photo)
+opi-gel-nails-pink-middlesbrough.jpg           ✅ OPI
+opi-nail-art-gel-freckles.jpg                  ✅ OPI
+opi-soft-pink-nails-freckles.jpg               ✅ OPI
+homepage-hero-freckles-middlesbrough.jpg       ✅ Homepage
+freckles-clinic-treatments-middlesbrough.webp  ✅ Homepage
+
+UPLOAD STRUCTURE FOR CLOUDFLARE
+---------------------------------
+Upload everything maintaining this exact folder structure:
+
+/index.html
+/about.html
+/caci.html
+/laser.html
+/skincare.html
+/dermalogica.html
+/beauty.html
+/opi.html
+/contact.html
+/skin-school.html
+/skin-school/why-caci-course-beats-one-off-facial.html
+/beauty-clinic-acklam.html
+/beauty-clinic-coulby-newham.html
+/beauty-clinic-marton.html
+/beauty-clinic-nunthorpe.html
+/beauty-clinic-ormesby.html
+/beauty-clinic-stockton.html
+/beauty-clinic-teesside.html
+/images/  (all image files)
