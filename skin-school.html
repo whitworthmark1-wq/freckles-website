@@ -357,6 +357,16 @@ footer{background:var(--black);padding:80px 80px 40px}
   .tc { min-width:0!important; }
 }
 </style>
+<style id="pref-source">
+.nav-pref{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid #0a0a0a;color:#0a0a0a;font-size:10.5px!important;font-weight:500!important;letter-spacing:.15em;text-transform:uppercase;white-space:nowrap;transition:background .2s,color .2s}
+.nav-pref:hover{background:#0a0a0a;color:#fff!important}
+.pref-g{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:18px;height:18px;border:1.5px solid currentColor;border-radius:50%;font-size:10px;font-weight:700;letter-spacing:0;line-height:1;text-transform:none}
+.hdr-pref{display:none}
+.nav-pref{flex-shrink:0}
+@media(max-width:1359px){.nav-pref{padding:0;width:36px;height:36px;justify-content:center;border-radius:50%;gap:0}.nav-pref .pref-txt{display:none}.nav-pref .pref-g{border:0;width:auto;height:auto;font-size:14px}}
+@media(max-width:1179px){.nav-pref{display:none!important}}
+@media(max-width:860px){.hdr-pref{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin-left:auto;margin-right:8px;color:#0a0a0a}.hdr-pref .pref-g{width:32px;height:32px;border-width:1px;font-size:15px}}
+</style>
 </head>
 <body>
 
@@ -386,8 +396,10 @@ footer{background:var(--black);padding:80px 80px 40px}
     <a href="/skin-school" style="border-bottom:1px solid #111;">Skin School</a>
     <a href="/contact">Contact</a>
     <a href="tel:01642890111" class="nav-phone">01642 890111</a>
+    <a href="https://www.google.com/preferences/source?q=frecklesbeautyclinic.co.uk" target="_blank" rel="noopener" class="nav-pref" aria-label="Add Freckles Beauty Clinic as a preferred source on Google" title="Add Freckles Beauty Clinic as a preferred source on Google"><span class="pref-g" aria-hidden="true">G</span><span class="pref-txt">Add us on Google</span></a>
     <a href="https://www.phorest.com/salon/frecklesbeautyclinic/book/service-selection" target="_blank" rel="noopener" class="nav-book">Book Now</a>
   </nav>
+  <a href="https://www.google.com/preferences/source?q=frecklesbeautyclinic.co.uk" target="_blank" rel="noopener" class="hdr-pref" aria-label="Add Freckles Beauty Clinic as a preferred source on Google" title="Add Freckles Beauty Clinic as a preferred source on Google"><span class="pref-g" aria-hidden="true">G</span></a>
   <button class="hamburger" id="ham" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
