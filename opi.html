@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGTWPR57BD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WGTWPR57BD');
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var where = a.closest('header') ? 'header' : a.closest('.mob-menu') ? 'mobile_menu' :
+                  a.closest('.mobile-call-bar') ? 'mobile_call_bar' : a.closest('footer') ? 'footer' : 'page_body';
+      if (a.classList.contains('nav-pref') || a.classList.contains('hdr-pref')) {
+        gtag('event', 'preferred_source_click', { placement: a.classList.contains('hdr-pref') ? 'mobile_icon' : 'desktop_button', page_location: location.href });
+      } else if (href.indexOf('phorest.com') !== -1) {
+        gtag('event', 'book_now_click', { link_location: where, link_text: (a.textContent || '').trim().slice(0, 60) });
+      } else if (href.indexOf('tel:') === 0) {
+        gtag('event', 'phone_click', { link_location: where });
+      }
+    });
+  </script>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>O.P.I Nail Spa Middlesbrough | Manicures, Gel Polish & Pedicures | Freckles Beauty Clinic</title>
 <meta name="description" content="Luxury O.P.I nail spa at Freckles Beauty Clinic, Middlesbrough. Professional OPI ProSpa manicures, pedicures and gel polish at 308 Linthorpe Road. Book your appointment today."/>
