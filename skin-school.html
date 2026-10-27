@@ -168,7 +168,7 @@ nav>a:hover{color:#666}
 .trust-item:last-child{border-right:none}
 .trust-item svg{width:20px;height:20px;fill:#fff;flex-shrink:0;opacity:.6}
 .trust-item-text strong{display:block;font-size:12.5px;font-weight:500;letter-spacing:.04em;color:#fff}
-.trust-item-text span{font-size:11px;font-weight:300;color:#666}
+.trust-item-text span{font-size:11px;font-weight:300;color:#999}
 
 /* ── SHARED ── */
 .btn-black{display:inline-block;padding:13px 36px;background:var(--black);color:#fff;font-size:10.5px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;transition:background .2s}
@@ -240,22 +240,22 @@ strong{font-weight:500;color:#111}
 footer{background:var(--black);padding:80px 80px 40px}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:56px;padding-bottom:56px;border-bottom:1px solid #161616}
 .footer-logo{margin-bottom:20px}
-.footer-logo img{height:34px;filter:brightness(0) invert(1);opacity:.8}
-.footer-about p{font-size:13.5px;font-weight:300;color:#444;line-height:1.85}
+.footer-logo img{height:34px;width:auto;filter:brightness(0) invert(1);opacity:.8}
+.footer-about p{font-size:13.5px;font-weight:300;color:#8a8a8a;line-height:1.85}
 .footer-social{display:flex;gap:12px;margin-top:26px}
 .footer-social a{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid #1e1e1e;transition:border-color .2s}
 .footer-social a:hover{border-color:#555}
 .footer-social svg{width:15px;height:15px;transition:opacity .2s}
 .footer-social a:hover svg{opacity:.75}
-.footer-col h4{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:#fff;margin-bottom:20px}
+footer h2{line-height:1.5;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:#fff;margin-bottom:20px}
 .footer-col ul li{margin-bottom:12px}
-.footer-col ul li a{font-size:13.5px;font-weight:300;color:#444;transition:color .2s}
+.footer-col ul li a{font-size:13.5px;font-weight:300;color:#8a8a8a;transition:color .2s}
 .footer-col ul li a:hover{color:#bbb}
 .footer-addr{font-size:13.5px;font-weight:300;color:#fff;line-height:2}
 .footer-addr a{color:#fff;font-weight:500}
 .footer-addr a:hover{color:#ccc}
-.footer-hours p{font-size:13px;font-weight:300;color:#333;line-height:1.95}
-.footer-bottom{padding-top:30px;display:flex;justify-content:space-between;font-size:11.5px;font-weight:300;color:#2a2a2a;flex-wrap:wrap;gap:10px;align-items:center}
+.footer-hours p{font-size:13px;font-weight:300;color:#8a8a8a;line-height:1.95}
+.footer-bottom{padding-top:30px;display:flex;justify-content:space-between;font-size:11.5px;font-weight:300;color:#8a8a8a;flex-wrap:wrap;gap:10px;align-items:center}
 .footer-bottom-social{display:flex;gap:14px}
 .footer-bottom-social a{transition:opacity .2s}
 .footer-bottom-social a:hover{opacity:.7}
@@ -373,7 +373,7 @@ footer{background:var(--black);padding:80px 80px 40px}
 <!-- ═══ HEADER ═══ -->
 <header id="hdr">
   <a href="/" class="logo" aria-label="Freckles Beauty Clinic — Home">
-    <img src="/images/freckles-logo.png" alt="Freckles Beauty Clinic Middlesbrough" width="160" height="40"/>
+    <img src="/images/freckles-logo.png" alt="Freckles Beauty Clinic Middlesbrough" width="148" height="40"/>
   </a>
   <nav aria-label="Main navigation">
     <a href="/">Home</a>
@@ -594,11 +594,11 @@ footer{background:var(--black);padding:80px 80px 40px}
   <div class="footer-grid">
     <div>
       <div class="footer-logo">
-        <img src="/images/freckles-logo.png" alt="Freckles Beauty Clinic Middlesbrough" width="160" height="34"/>
+        <img src="/images/freckles-logo.png" alt="Freckles Beauty Clinic Middlesbrough" width="126" height="34"/>
       </div>
       <div class="footer-about">
         <p>Middlesbrough's longest-established beauty &amp; skincare clinic. Expert laser hair removal, CACI facials, Dermalogica skincare and AI skin analysis from our home at 308 Linthorpe Road since 2004.</p>
-        <p style="margin-top:10px;color:#333;">Rated <strong style="color:#666;">5 stars</strong> from 106 Google reviews.</p>
+        <p style="margin-top:10px;color:#8a8a8a;">Rated <strong style="color:#bbb;">5 stars</strong> from 106 Google reviews.</p>
       </div>
       <div class="footer-social">
         <a href="https://www.instagram.com/frecklesbeauty.middlesbrough?igsh=a2NydzN4cGZ5OG5y" target="_blank" rel="noopener" aria-label="Follow Freckles on Instagram"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -622,7 +622,7 @@ footer{background:var(--black);padding:80px 80px 40px}
       </div>
     </div>
     <div class="footer-col">
-      <h4>Treatments</h4>
+      <h2>Treatments</h2>
       <ul>
         <li><a href="/skincare">Pro A AI Skin Analysis</a></li>
         <li><a href="/laser">Laser Hair Removal</a></li>
@@ -633,7 +633,7 @@ footer{background:var(--black);padding:80px 80px 40px}
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Clinic</h4>
+      <h2>Clinic</h2>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About Us</a></li>
@@ -642,12 +642,12 @@ footer{background:var(--black);padding:80px 80px 40px}
         <li><a href="https://www.phorest.com/salon/frecklesbeautyclinic/book/service-selection" target="_blank" rel="noopener">Book Online</a></li>
       </ul>
       <div class="footer-hours" style="margin-top:28px;">
-        <h4>Opening Hours</h4>
+        <h2>Opening Hours</h2>
         <p>Tue &amp; Wed: 9:30am – 5:30pm<br/>Thu &amp; Fri: 9:00am – 7:00pm<br/>Saturday: 9:00am – 4:00pm<br/>Sun &amp; Mon: Closed</p>
       </div>
     </div>
     <div class="footer-col">
-      <h4>Areas We Serve</h4>
+      <h2>Areas We Serve</h2>
       <ul>
         <li><a href="/beauty-clinic-marton">Marton</a></li>
         <li><a href="/beauty-clinic-coulby-newham">Coulby Newham</a></li>
@@ -659,7 +659,7 @@ footer{background:var(--black);padding:80px 80px 40px}
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Find Us</h4>
+      <h2>Find Us</h2>
       <p class="footer-addr">
         Freckles Beauty Clinic<br/>308 Linthorpe Road<br/>Middlesbrough<br/>TS1 3QX<br/><br/>
         <a href="tel:01642890111" style="color:#fff;font-weight:600;font-size:15px;letter-spacing:.03em;">01642 890111</a>
