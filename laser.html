@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGTWPR57BD"></script>
+  <link rel="stylesheet" href="/assets/site-extras.css">
+  <script src="/assets/cookie-consent.js" defer></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -16,6 +17,8 @@
                   a.closest('.mobile-call-bar') ? 'mobile_call_bar' : a.closest('footer') ? 'footer' : 'page_body';
       if (a.classList.contains('nav-pref') || a.classList.contains('hdr-pref')) {
         gtag('event', 'preferred_source_click', { placement: a.classList.contains('hdr-pref') ? 'mobile_icon' : 'desktop_button', page_location: location.href });
+      } else if (a.classList.contains('nav-voucher') || a.classList.contains('mob-voucher') || a.classList.contains('ob-voucher')) {
+        gtag('event', 'voucher_click', { link_location: where });
       } else if (href.indexOf('phorest.com') !== -1) {
         gtag('event', 'book_now_click', { link_location: where, link_text: (a.textContent || '').trim().slice(0, 60) });
       } else if (href.indexOf('tel:') === 0) {
@@ -153,6 +156,7 @@ h2{font-size:clamp(22px,2.6vw,38px);font-weight:300;letter-spacing:.01em;line-he
     <a href="/contact">Contact</a>
     <a href="tel:01642890111" class="nav-phone">01642 890111</a>
     <a href="https://www.google.com/preferences/source?q=frecklesbeautyclinic.co.uk" target="_blank" rel="noopener" class="nav-pref" aria-label="Add Freckles Beauty Clinic as a preferred source on Google" title="Add Freckles Beauty Clinic as a preferred source on Google"><span class="pref-g" aria-hidden="true">G</span><span class="pref-txt">Add us on Google</span></a>
+    <a href="https://www.phorest.com/salon/frecklesbeautyclinic/buy/voucher" target="_blank" rel="noopener" class="nav-voucher">Buy Christmas Vouchers</a>
     <a href="https://www.phorest.com/salon/frecklesbeautyclinic/book/service-selection" target="_blank" rel="noopener" class="nav-book">Book Now</a>
   </nav>
   <a href="https://www.google.com/preferences/source?q=frecklesbeautyclinic.co.uk" target="_blank" rel="noopener" class="hdr-pref" aria-label="Add Freckles Beauty Clinic as a preferred source on Google" title="Add Freckles Beauty Clinic as a preferred source on Google"><span class="pref-g" aria-hidden="true">G</span></a>
@@ -167,6 +171,7 @@ h2{font-size:clamp(22px,2.6vw,38px);font-weight:300;letter-spacing:.01em;line-he
   </div>
   <a href="/skin-school">Skin School</a>
   <a href="/contact">Contact</a>
+  <a href="https://www.phorest.com/salon/frecklesbeautyclinic/buy/voucher" target="_blank" rel="noopener" class="mob-voucher">Buy Christmas Vouchers</a>
   <a href="https://www.phorest.com/salon/frecklesbeautyclinic/book/service-selection" target="_blank" rel="noopener" class="mob-book">Book Now</a>
 </div>
 <div class="mobile-call-bar">
@@ -341,6 +346,7 @@ h2{font-size:clamp(22px,2.6vw,38px);font-weight:300;letter-spacing:.01em;line-he
   </div>
   <div class="footer-bottom">
     <span>© 2025 Freckles Beauty Clinic. All rights reserved. 308 Linthorpe Road, Middlesbrough TS1 3QX</span>
+    <span class="footer-legal"><a href="/offers">Offers</a><a href="/cookie-policy">Cookie Policy</a><button type="button" data-cookie-settings>Cookie Settings</button></span>
     <div class="footer-bottom-social">
       <a href="https://www.instagram.com/frecklesbeauty.middlesbrough?igsh=a2NydzN4cGZ5OG5y" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <defs>
